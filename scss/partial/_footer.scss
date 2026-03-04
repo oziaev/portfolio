@@ -1,0 +1,58 @@
+@use "_mixin" as m;
+@use "_common" as *;
+
+#footer {
+  border-top: 1px solid $main-color;
+  padding-top: $section-space-sp;
+  padding-left: $header-space-pc;
+
+  @include m.tb {
+    padding-left: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $section-space-sp;
+
+    @include m.sp {
+      flex-direction: column;
+      align-items: anchor-center;
+      margin-bottom: 32px;
+    }
+
+    .text {
+      @include m.sp {
+        margin-bottom: 32px;
+      }
+
+      span {
+        font-weight: $fw-semi-bold;
+      }
+      
+      .name {
+        margin-bottom: 8px;
+      }
+    }
+
+    .sns {
+      display: flex;
+
+      li {
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .copy {
+    text-align: center;
+    font-size: $fs-sm;
+    color: $main-color;
+    padding-block: 24px;
+  }
+}

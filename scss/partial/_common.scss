@@ -1,0 +1,206 @@
+@use "_mixin" as m;
+
+// カラー
+$base-color: #333128;
+$accent-color: #dbdb79;
+$main-color: #abb2bf;
+$font-color: #fff;
+
+// シャドウ
+$shadow: 4px 4px 4px 0px rgba(107, 102, 95, 0.5);
+
+$fs-xl: 3.2rem;
+$fs-lg: 2.4rem;
+$fs-md: 1.8rem;
+$fs-sm: 1.2rem;
+
+$fw-bold: 500;
+$fw-semi-bold: 400;
+$fw-base: 300;
+
+$ls-base: 0.03em;
+
+//
+$section-space-pc: 96px;
+$section-space-sp: 48px;
+$header-space-pc: 180px;
+
+//
+$transition: 0.3s ease;
+
+// z-index管理
+//  header = 9999
+//
+
+// base 共通
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: $fw-base;
+  letter-spacing: $ls-base;
+  font-family: "Fira Code", monospace;
+  color: $font-color;
+  background-color: $base-color;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $font-color;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+// 共通クラス
+section {
+  margin-bottom: 192px;
+
+  @include m.sp {
+    margin-bottom: $section-space-pc;
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.wrapper {
+  max-width: 768px;
+  padding-inline: 16px;
+  margin-inline: auto;
+
+  @include m.tb-1100 {
+    padding-inline: 24px;
+  }
+}
+
+span {
+  color: $accent-color;
+}
+
+.btn {
+  border: 1px solid $accent-color;
+  border-radius: 5px;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px $accent-color;
+  box-shadow:
+    0 0 2px #fff,
+    inset 0 0 2px #fff,
+    0 0 0px #fff,
+    0 0 0px $accent-color,
+    0 0 0px $accent-color,
+    0 0 8px $accent-color,
+    0 0 8px $accent-color,
+    inset 0 0 8px $accent-color;
+  // box-shadow: 0 0 5px #fff, 0 0 20px $accent-color, 0 0 10px $accent-color, 0 0 10px $accent-color;
+  padding: 8px 16px;
+
+  &:hover {
+    animation: neon-flicker-v2 1.5s infinite alternate;
+  }
+}
+
+.section-title {
+  font-size: $fs-xl;
+  font-weight: $fw-bold;
+  position: relative;
+  margin-bottom: $section-space-pc;
+
+  @include m.sp {
+    font-size: $fs-lg;
+    margin-bottom: $section-space-sp;
+  }
+
+  .border {
+    width: 300px;
+    height: 1px;
+    display: inline-block;
+    background-color: $accent-color;
+
+    @include m.sp-650 {
+      width: 200px;
+    }
+
+    @include m.sp {
+      width: 100px;
+    }
+  }
+}
+
+.page-title {
+  font-size: $fs-xl;
+  font-weight: $fw-bold;
+  margin-bottom: $section-space-pc;
+
+  @include m.sp {
+    font-size: $fs-lg;
+    margin-bottom: $section-space-sp;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.fadein {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 1s ease;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes neon-flicker-v2 {
+  // 【点灯】最新の密度の高い影を維持
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px $accent-color;
+    box-shadow:
+      0 0 2px #fff,
+      inset 0 0 2px #fff,
+      0 0 0px #fff,
+      0 0 0px $accent-color,
+      0 0 0px $accent-color,
+      0 0 8px $accent-color,
+      0 0 8px $accent-color,
+      inset 0 0 8px $accent-color;
+    border-color: $accent-color;
+    opacity: 1;
+  }
+
+  // 【瞬き】一瞬だけ光を飛ばす
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+    border-color: rgba($accent-color, 0.3);
+    opacity: 0.7;
+  }
+}
