@@ -131,6 +131,7 @@ span {
   opacity: 0.5;
   border-radius: 50%;
   border: 1px solid #abb2bf;
+  animation: poyoyon3 2.5s infinite;
   z-index: -10;
 }
 @media (max-width: 650px) {
@@ -146,6 +147,7 @@ span {
   opacity: 0.5;
   border-radius: 50%;
   border: 1px solid #abb2bf;
+  animation: poyoyon3 2.5s infinite;
   z-index: -10;
 }
 @media (max-width: 650px) {
@@ -191,6 +193,32 @@ span {
     box-shadow: none;
     border-color: rgba(219, 219, 121, 0.3);
     opacity: 0.7;
+  }
+}
+@keyframes poyoyon3 {
+  0%, 40% {
+    transform: skew(0deg, 0deg);
+  }
+  5% {
+    transform: skew(5deg, 5deg);
+  }
+  10% {
+    transform: skew(-4deg, -4deg);
+  }
+  15% {
+    transform: skew(3deg, 3deg);
+  }
+  20% {
+    transform: skew(-2deg, -2deg);
+  }
+  25% {
+    transform: skew(1deg, 1deg);
+  }
+  30% {
+    transform: skew(-0.6deg, -0.6deg);
+  }
+  35% {
+    transform: skew(0.3deg, 0.3deg);
   }
 }
 #header {
@@ -482,6 +510,7 @@ span {
   align-items: center;
   position: relative;
   overflow-x: hidden;
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 #top #fv .wrapper .introduction {
@@ -530,7 +559,7 @@ span {
 #top #fv .maru-border-m {
   position: absolute;
   right: -130px;
-  bottom: 0px;
+  bottom: 10px;
 }
 @media (max-width: 650px) {
   #top #fv .maru-border-m {
@@ -791,6 +820,7 @@ span {
 }
 #top .contact .flex .box .box-inner {
   width: 260px;
+  background-color: #333128;
   border: 1px solid #abb2bf;
   margin-inline: auto;
 }
@@ -828,40 +858,28 @@ span {
   bottom: 50px;
 }
 
-@keyframes poyoyon3 {
-  0%, 40% {
-    transform: skew(0deg, 0deg);
-  }
-  5% {
-    transform: skew(5deg, 5deg);
-  }
-  10% {
-    transform: skew(-4deg, -4deg);
-  }
-  15% {
-    transform: skew(3deg, 3deg);
-  }
-  20% {
-    transform: skew(-2deg, -2deg);
-  }
-  25% {
-    transform: skew(1deg, 1deg);
-  }
-  30% {
-    transform: skew(-0.6deg, -0.6deg);
-  }
-  35% {
-    transform: skew(0.3deg, 0.3deg);
-  }
-}
 #works-list {
-  margin-top: 144px;
   margin-left: 180px;
 }
 @media (max-width: 900px) {
   #works-list {
     margin-left: 0;
   }
+}
+#works-list .works {
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 144px;
+}
+#works-list .works .maru-border-m {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+#works-list .works .maru-stripe {
+  position: absolute;
+  top: 50px;
+  right: 100px;
 }
 #works-list .works .container .grid {
   display: grid;
@@ -931,6 +949,10 @@ span {
   color: #fff;
   text-shadow: 0 0 3px #fff, 0 0 8px #dbdb79;
 }
+#works-list .contact {
+  position: relative;
+  overflow-x: hidden;
+}
 #works-list .contact .flex {
   display: flex;
   justify-content: space-between;
@@ -962,6 +984,7 @@ span {
 }
 #works-list .contact .flex .box .box-inner {
   width: 260px;
+  background-color: #333128;
   border: 1px solid #abb2bf;
   margin-inline: auto;
 }
@@ -993,9 +1016,14 @@ span {
 #works-list .contact .flex .box .box-inner .list .item p {
   transition: 0.3s ease;
 }
+#works-list .contact .maru-border-m {
+  position: absolute;
+  left: -30px;
+  bottom: 50px;
+}
 
 #about {
-  margin-top: 144px;
+  padding-top: 144px;
   margin-left: 180px;
 }
 @media (max-width: 900px) {
@@ -1004,19 +1032,9 @@ span {
   }
 }
 #about .concept {
-  margin-top: 192px;
-  margin-bottom: 300px;
-}
-@media (max-width: 900px) {
-  #about .concept {
-    margin-bottom: 250px;
-  }
-}
-@media (max-width: 650px) {
-  #about .concept {
-    margin-top: 150px;
-    margin-bottom: 200px;
-  }
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 96px;
 }
 #about .concept .wrapper {
   text-align: center;
@@ -1049,17 +1067,29 @@ span {
     line-height: 1.4;
   }
 }
+#about .concept .maru-border-m {
+  position: absolute;
+  left: -30px;
+  bottom: 50px;
+}
+#about .concept .maru-stripe {
+  position: absolute;
+  left: 100px;
+  bottom: 30px;
+}
 #about .about {
-  margin-bottom: 350px;
+  overflow-x: hidden;
+  padding-top: 200px;
+  padding-bottom: 300px;
 }
 @media (max-width: 1100px) {
   #about .about {
-    margin-bottom: 300px;
+    padding-bottom: 270px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 900px) {
   #about .about {
-    margin-bottom: 270px;
+    padding-top: 150px;
   }
 }
 #about .about .flex {
@@ -1144,28 +1174,26 @@ span {
 #about .about .flex .img-ia {
   width: 100px;
   position: absolute;
-  top: -250px;
-  right: 100px;
+  top: -150px;
+  right: 50px;
   filter: brightness(80%);
   animation: poyoyon3 2.5s infinite;
   border-right: 2px solid #dbdb79;
 }
-@media (max-width: 1100px) {
-  #about .about .flex .img-ia {
-    right: 50px;
-  }
-}
 @media (max-width: 900px) {
   #about .about .flex .img-ia {
     width: 80px;
-    top: -200px;
+    top: -100px;
   }
 }
 @media (max-width: 650px) {
   #about .about .flex .img-ia {
-    width: 60px;
-    top: -150px;
     right: 30px;
+  }
+}
+@media (max-width: 430px) {
+  #about .about .flex .img-ia {
+    width: 65px;
   }
 }
 #about .about .flex .eve {
@@ -1184,16 +1212,7 @@ span {
 }
 @media (max-width: 650px) {
   #about .about .flex .eve {
-    width: 150px;
-    right: 50px;
-    bottom: -850px;
-  }
-}
-@media (max-width: 430px) {
-  #about .about .flex .eve {
-    width: 120px;
-    right: 40px;
-    bottom: -860px;
+    display: none;
   }
 }
 #about .about .flex .eve .img-eve {
@@ -1201,13 +1220,53 @@ span {
   animation: poyoyon3 2.5s infinite;
   border-bottom: 2px solid #dbdb79;
 }
-@media (max-width: 650px) {
-  #about .skills {
-    margin-bottom: 252px;
+#about .about .flex .maru-border-s {
+  position: absolute;
+  right: 100px;
+  bottom: -200px;
+}
+@media (max-width: 1100px) {
+  #about .about .flex .maru-border-s {
+    right: 80px;
+    bottom: -170px;
   }
+}
+@media (max-width: 650px) {
+  #about .about .flex .maru-border-s {
+    right: -20px;
+    bottom: -50px;
+  }
+}
+#about .skills {
+  position: relative;
+  overflow-x: hidden;
+}
+@media (max-width: 430px) {
+  #about .skills {
+    padding-bottom: 192px;
+  }
+}
+#about .skills .eve {
+  width: 150px;
+  position: absolute;
+  right: 50px;
+  bottom: 70px;
+  transform: rotate(-20deg);
+  display: none;
+}
+@media (max-width: 650px) {
+  #about .skills .eve {
+    display: block;
+  }
+}
+#about .skills .eve .img-eve {
+  filter: brightness(80%);
+  animation: poyoyon3 2.5s infinite;
+  border-bottom: 2px solid #dbdb79;
 }
 #about .contact {
   position: relative;
+  overflow-x: hidden;
 }
 #about .contact .flex {
   display: flex;
@@ -1240,6 +1299,7 @@ span {
 }
 #about .contact .flex .box .box-inner {
   width: 260px;
+  background-color: #333128;
   border: 1px solid #abb2bf;
   margin-inline: auto;
 }
@@ -1270,6 +1330,11 @@ span {
 }
 #about .contact .flex .box .box-inner .list .item p {
   transition: 0.3s ease;
+}
+#about .contact .maru-border-m {
+  position: absolute;
+  left: -30px;
+  bottom: 50px;
 }
 
 .skills {
