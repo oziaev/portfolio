@@ -2,14 +2,29 @@
 @use "_common" as *;
 
 #works-list {
-  margin-top: 144px;
   margin-left: $header-space-pc;
-
+  
   @include m.tb {
     margin-left: 0;
   }
-
+  
   .works {
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 144px;
+    
+    .maru-border-m {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+    }
+    
+    .maru-stripe {
+      position: absolute;
+      top: 50px;
+      right: 100px;
+    }
+    
     .container {
       .grid {
         display: grid;
@@ -92,6 +107,9 @@
   }
 
   .contact {
+    position: relative;
+    overflow-x: hidden;
+
     .flex {
       display: flex;
       justify-content: space-between;
@@ -121,6 +139,7 @@
 
         .box-inner {
           width: 260px;
+          background-color: $base-color;
           border: 1px solid $main-color;
           margin-inline: auto;
 
@@ -162,6 +181,12 @@
           }
         }
       }
+    }
+
+    .maru-border-m {
+      position: absolute;
+      left: -30px;
+      bottom: 50px; 
     }
   }
 }
