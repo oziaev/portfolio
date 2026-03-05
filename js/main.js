@@ -27,6 +27,13 @@ $(function () {
   if ($hamburgerMenu.length) $hamburgerMenu.on("click", closeMenu);
   // ----------------------------------------------
 
+  const links = document.querySelectorAll('.link a');
+  links.forEach(link => {
+    if (link.href === location.href) {
+      link.classList.add('is-active');
+    }
+  });
+
   // ----------------------------------------------
 $(window).on('load', function() {
   $('.introduction, .supplement, .fv-btn').each(function() {

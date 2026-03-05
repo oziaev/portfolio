@@ -43,10 +43,15 @@
       display: flex;
 
       li {
+        transition: $transition;
         margin-right: 8px;
 
         &:last-child {
           margin-right: 0;
+        }
+
+        &:hover {
+          opacity: .8;
         }
       }
     }

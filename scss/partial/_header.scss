@@ -78,10 +78,27 @@
         }
         
         li {
+          transition: $transition;
           margin-bottom: 16px;
           
           &:last-child {
             margin-bottom: 0;
+          }
+          
+          &:hover {
+            text-shadow: 0 0 5px #fff, 0 0 10px $accent-color;
+
+            a {
+              color: $font-color;
+            }
+          }
+          
+          a {
+            color: $main-color;
+
+            &.is-active {
+              color: $font-color;
+            }
           }
         }
       }
@@ -99,7 +116,12 @@
         }
         
         li {
+          transition: $transition;
           margin-right: 8px;
+
+          &:hover {
+            opacity: .8;
+          }
         }
       }
     }
