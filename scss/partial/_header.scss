@@ -5,11 +5,12 @@
   width: 180px;
   height: 100vh;
   border-right: 1px solid $main-color;
+  background-color: $base-color;
   position: fixed;
   top: 0;
   left: 0;
   padding: 48px 24px;
-  z-index: 9999;
+  z-index: 9990;
   
   @include m.tb {
     width: 100%;
@@ -151,7 +152,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(51, 49, 40, .9);
+    background-color: rgba(51, 49, 40, 1);
     transform: translateX(100%);
     transition: $transition;
     opacity: 0;

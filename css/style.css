@@ -30,11 +30,11 @@ img {
 }
 
 section {
-  margin-bottom: 192px;
+  padding-bottom: 192px;
 }
 @media (max-width: 430px) {
   section {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
 }
 
@@ -125,6 +125,60 @@ span {
   transform: translateY(0);
 }
 
+.maru-border-s {
+  width: 135px;
+  height: 135px;
+  opacity: 0.5;
+  border-radius: 50%;
+  border: 1px solid #abb2bf;
+  z-index: -10;
+}
+@media (max-width: 650px) {
+  .maru-border-s {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.maru-border-m {
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  border-radius: 50%;
+  border: 1px solid #abb2bf;
+  z-index: -10;
+}
+@media (max-width: 650px) {
+  .maru-border-m {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.maru-stripe {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-image: repeating-linear-gradient(-90deg, #abb2bf 0, #abb2bf 4px, transparent 4px, transparent 16px);
+  animation: rotateStripe 20s linear infinite;
+  z-index: -20;
+}
+@media (max-width: 650px) {
+  .maru-stripe {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes rotateStripe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes neon-flicker-v2 {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     text-shadow: 0 0 5px #fff, 0 0 10px #dbdb79;
@@ -143,11 +197,12 @@ span {
   width: 180px;
   height: 100vh;
   border-right: 1px solid #abb2bf;
+  background-color: #333128;
   position: fixed;
   top: 0;
   left: 0;
   padding: 48px 24px;
-  z-index: 9999;
+  z-index: 9990;
 }
 @media (max-width: 900px) {
   #header {
@@ -283,7 +338,7 @@ span {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(51, 49, 40, 0.9);
+  background-color: rgb(51, 49, 40);
   transform: translateX(100%);
   transition: 0.3s ease;
   opacity: 0;
@@ -344,6 +399,8 @@ span {
   border-top: 1px solid #abb2bf;
   padding-top: 48px;
   padding-left: 180px;
+  position: relative;
+  z-index: 9999;
 }
 @media (max-width: 900px) {
   #footer {
@@ -359,7 +416,7 @@ span {
 @media (max-width: 430px) {
   #footer .container {
     flex-direction: column;
-    align-items: anchor-center;
+    align-items: center;
     margin-bottom: 32px;
   }
 }
@@ -402,6 +459,8 @@ span {
   height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow-x: hidden;
   margin-bottom: 0;
 }
 #top #fv .wrapper .introduction {
@@ -427,6 +486,8 @@ span {
 }
 #top #fv .wrapper .supplement {
   color: #abb2bf;
+  text-align: justify;
+  text-justify: inter-ideograph;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 1.5s ease 1.5s, transform 1.5s cubic-bezier(0.25, 1, 0.5, 1) 1.5s;
@@ -444,6 +505,21 @@ span {
 #top #fv .wrapper .fv-btn.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+#top #fv .maru-border-m {
+  position: absolute;
+  right: -130px;
+  bottom: 0px;
+}
+@media (max-width: 650px) {
+  #top #fv .maru-border-m {
+    right: -80px;
+  }
+}
+#top #fv .maru-stripe {
+  position: absolute;
+  right: -10px;
+  bottom: 80px;
 }
 #top .concept {
   margin-bottom: 192px;
@@ -470,6 +546,10 @@ span {
   #top .concept .wrapper p .nobreak {
     font-size: 2rem;
   }
+}
+#top .works {
+  position: relative;
+  overflow-x: hidden;
 }
 #top .works .flex {
   display: flex;
@@ -540,14 +620,75 @@ span {
     font-size: 1.8rem;
   }
 }
+#top .works .maru-border-s {
+  position: absolute;
+  left: -20px;
+  bottom: 10px;
+}
+@media (max-width: 1100px) {
+  #top .works .maru-border-s {
+    left: auto;
+    right: 30px;
+    bottom: 300px;
+  }
+}
+@media (max-width: 650px) {
+  #top .works .maru-border-s {
+    right: -20px;
+    bottom: 0;
+  }
+}
+@media (max-width: 430px) {
+  #top .works .maru-border-s {
+    top: 50px;
+    bottom: auto;
+  }
+}
+#top .works .maru-border-m {
+  display: none;
+}
+@media (max-width: 1100px) {
+  #top .works .maru-border-m {
+    display: block;
+    position: absolute;
+    right: 50px;
+    bottom: 200px;
+  }
+}
+@media (max-width: 650px) {
+  #top .works .maru-border-m {
+    display: none;
+  }
+}
+#top .about {
+  position: relative;
+  overflow-x: hidden;
+}
+@media (max-width: 650px) {
+  #top .about {
+    padding-bottom: 300px;
+  }
+}
 #top .about .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 650px) {
+  #top .about .flex {
+    flex-direction: column;
+  }
+}
 #top .about .flex .text {
   width: 60%;
   color: #abb2bf;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+@media (max-width: 650px) {
+  #top .about .flex .text {
+    width: 100%;
+  }
 }
 #top .about .flex .text .text-1 {
   margin-bottom: 24px;
@@ -561,9 +702,42 @@ span {
   border-bottom: 2px solid #dbdb79;
   animation: poyoyon3 2.5s infinite;
   opacity: 1;
+  position: relative;
+}
+@media (max-width: 650px) {
+  #top .about .flex .img-box {
+    width: 200px;
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+  }
+}
+@media (max-width: 430px) {
+  #top .about .flex .img-box {
+    width: 180px;
+  }
 }
 #top .about .flex .img-box img {
   filter: brightness(80%);
+}
+#top .about .flex .img-box .maru-stripe {
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+#top .about .flex .img-box .maru-border-s {
+  position: absolute;
+  top: 50px;
+  left: -80px;
+}
+#top .about .flex .img-box .maru-border-m {
+  position: absolute;
+  right: -50px;
+  bottom: -80px;
+}
+#top .contact {
+  position: relative;
+  overflow-x: hidden;
 }
 #top .contact .flex {
   display: flex;
@@ -627,6 +801,11 @@ span {
 #top .contact .flex .box .box-inner .list .item p {
   transition: 0.3s ease;
 }
+#top .contact .maru-border-m {
+  position: absolute;
+  left: -30px;
+  bottom: 50px;
+}
 
 @keyframes poyoyon3 {
   0%, 40% {
@@ -655,7 +834,7 @@ span {
   }
 }
 #works-list {
-  margin-top: 96px;
+  margin-top: 144px;
   margin-left: 180px;
 }
 @media (max-width: 900px) {
@@ -795,7 +974,7 @@ span {
 }
 
 #about {
-  margin-top: 96px;
+  margin-top: 144px;
   margin-left: 180px;
 }
 @media (max-width: 900px) {
@@ -968,11 +1147,6 @@ span {
     right: 30px;
   }
 }
-@media (max-width: 430px) {
-  #about .about .flex .img-ia {
-    width: 50px;
-  }
-}
 #about .about .flex .eve {
   width: 200px;
   position: absolute;
@@ -1077,6 +1251,9 @@ span {
   transition: 0.3s ease;
 }
 
+.skills {
+  position: relative;
+}
 .skills .list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -1101,6 +1278,11 @@ span {
 .skills .list .item:hover img {
   animation: kurukuru 1s ease-out;
 }
+.skills .maru-border {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
 
 @keyframes kurukuru {
   0% {
@@ -1113,7 +1295,7 @@ span {
   }
 }
 #contact {
-  margin-top: 96px;
+  margin-top: 144px;
   margin-left: 180px;
 }
 @media (max-width: 900px) {

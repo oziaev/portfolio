@@ -2,6 +2,8 @@
 @use "_common" as *;
 
 .skills {
+  position: relative;
+
   .list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -25,6 +27,12 @@
         animation: kurukuru 1s ease-out;
       }
     }
+  }
+
+  .maru-border {
+    position: absolute;
+    top: -20px;
+    left: -20px;
   }
 }
 

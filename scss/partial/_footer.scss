@@ -5,6 +5,8 @@
   border-top: 1px solid $main-color;
   padding-top: $section-space-sp;
   padding-left: $header-space-pc;
+  position: relative;
+  z-index: 9999;
 
   @include m.tb {
     padding-left: 0;
@@ -18,7 +20,8 @@
 
     @include m.sp {
       flex-direction: column;
-      align-items: anchor-center;
+      // align-items: anchor-center;
+      align-items: center;
       margin-bottom: 32px;
     }
 

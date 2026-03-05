@@ -65,10 +65,12 @@ img {
 
 // 共通クラス
 section {
-  margin-bottom: 192px;
+  padding-bottom: 192px;
+  // margin-bottom: 192px;
 
   @include m.sp {
-    margin-bottom: $section-space-pc;
+    padding-bottom: $section-space-pc;
+    // margin-bottom: $section-space-pc;
   }
 }
 
@@ -165,6 +167,58 @@ span {
   &.active {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.maru-border-s {
+  width: 135px;
+  height: 135px;
+  opacity: .5;
+  border-radius: 50%;
+  border: 1px solid $main-color;
+  z-index: -10;
+
+  @include m.sp-650 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.maru-border-m {
+  width: 200px;
+  height: 200px;
+  opacity: .5;
+  border-radius: 50%;
+  border: 1px solid $main-color;
+  z-index: -10;
+
+  @include m.sp-650 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.maru-stripe { 
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  opacity: .5;
+  background-image: repeating-linear-gradient( -90deg, $main-color 0, $main-color 4px, transparent 4px, transparent 16px);
+  animation: rotateStripe 20s linear infinite;
+  z-index: -20;
+
+  @include m.sp-650 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes rotateStripe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

@@ -2,7 +2,7 @@
 @use "_common" as *;
 
 #top {
-  margin-left: $header-space-pc;
+  margin-left: 180px;
 
   @include m.tb {
     margin-left: 0;
@@ -12,6 +12,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow-x: hidden;
     margin-bottom: 0;
 
     .wrapper {
@@ -20,29 +22,31 @@
         opacity: 0;
         transform: translateX(-20px);
         transition:
-          clip-path 3s cubic-bezier(0.25, 1, 0.5, 1) 0.5s,
-          opacity 2s ease,
-          transform 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.5s;
+        clip-path 3s cubic-bezier(0.25, 1, 0.5, 1) 0.5s,
+        opacity 2s ease,
+        transform 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.5s;
         font-size: $fs-xl;
         margin-bottom: 32px;
-
+        
         @include m.sp {
           font-size: $fs-lg;
         }
-
+        
         span {
           font-weight: $fw-bold;
         }
-
+        
         &.is-visible {
           clip-path: inset(0 0 0 0);
           opacity: 1;
           transform: translateX(0);
         }
       }
-
+      
       .supplement {
         color: $main-color;
+        text-align: justify;
+        text-justify: inter-ideograph;
         opacity: 0;
         transform: translateY(10px);
         transition:
@@ -68,6 +72,22 @@
           transform: translateY(0);
         }
       }
+    }
+
+    .maru-border-m {
+      position: absolute;
+      right: -130px;
+      bottom: 0px;
+
+      @include m.sp-650 {
+        right: -80px;
+      }
+    }
+
+    .maru-stripe {
+      position: absolute;
+      right: -10px;
+      bottom: 80px;
     }
   }
 
@@ -102,6 +122,9 @@
   }
 
   .works {
+    position: relative;
+    overflow-x: hidden;
+    
     .flex {
       display: flex;
       justify-content: space-between;
@@ -176,17 +199,71 @@
         }
       }
     }
+
+    .maru-border-s {
+      position: absolute;
+      left: -20px;
+      bottom: 10px;
+
+      @include m.tb-1100 {
+        left: auto;
+        right: 30px;
+        bottom: 300px;
+      }
+
+      @include m.sp-650 {
+        right: -20px;
+        bottom: 0;
+      }
+
+      @include m.sp {
+        top: 50px;
+        bottom: auto;
+      }
+    }
+
+    .maru-border-m {
+      display: none;
+
+      @include m.tb-1100 {
+        display: block;
+        position: absolute;
+        right: 50px;
+        bottom: 200px;
+      }
+
+      @include m.sp-650 {
+        display: none;
+      }
+    }
   }
 
   .about {
+    position: relative;
+    overflow-x: hidden;
+
+    @include m.sp-650 {
+      padding-bottom: 300px;
+    }
+
     .flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
+      @include m.sp-650 {
+        flex-direction: column;
+      }
+
       .text {
         width: 60%;
         color: $main-color;
+        text-align: justify;
+        text-justify: inter-ideograph;
+
+        @include m.sp-650 {
+          width: 100%;
+        }
 
         .text-1 {
           margin-bottom: 24px;
@@ -203,15 +280,47 @@
         border-bottom: 2px solid $accent-color;
         animation: poyoyon3 2.5s infinite;
         opacity: 1;
+        position: relative;
+
+        @include m.sp-650 {
+          width: 200px;
+          position: absolute;
+          right: 20px;
+          bottom: 100px;
+        }
+
+        @include m.sp {
+          width: 180px;
+        }
 
         img {
           filter: brightness(80%);
+        }
+
+        .maru-stripe {
+          position: absolute;
+          top: 0;
+          left: -30px;
+        }
+        .maru-border-s {
+          position: absolute;
+          top: 50px;
+          left: -80px;
+        }
+
+        .maru-border-m {
+          position: absolute;
+          right: -50px;
+          bottom: -80px;
         }
       }
     }
   }
 
   .contact {
+    position: relative;
+    overflow-x: hidden;
+
     .flex {
       display: flex;
       justify-content: space-between;
@@ -282,6 +391,12 @@
           }
         }
       }
+    }
+
+    .maru-border-m {
+      position: absolute;
+      left: -30px;
+      bottom: 50px;
     }
   }
 }
