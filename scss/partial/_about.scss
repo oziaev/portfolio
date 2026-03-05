@@ -2,7 +2,7 @@
 @use "_common" as *;
 
 #about {
-  margin-top: $section-space-pc;
+  margin-top: 144px;
   margin-left: $header-space-pc;
 
   @include m.tb {
@@ -142,14 +142,6 @@
           width: 100px;
           bottom: -200px;
         }
-
-        
-        // @include m.tb {
-          //   width: 100px;
-          //   position: absolute;
-          //   top: -200px;
-          //   left: 0;
-          // }
           
           img {
             transform: rotateY(180deg);
@@ -179,10 +171,6 @@
             width: 60px;
             top: -150px;
             right: 30px;
-          }
-
-          @include m.sp {
-            width: 50px;
           }
       }
       
