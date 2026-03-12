@@ -11,7 +11,7 @@
   @include m.tb {
     padding-left: 0;
   }
-  
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -33,10 +33,6 @@
       span {
         font-weight: $fw-semi-bold;
       }
-      
-      .name {
-        margin-bottom: 8px;
-      }
     }
 
     .sns {
@@ -51,7 +47,9 @@
         }
 
         &:hover {
-          opacity: .8;
+          img {
+            animation: kurukuru 1s ease-out;
+          }
         }
       }
     }

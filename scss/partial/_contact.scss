@@ -2,11 +2,19 @@
 @use "_common" as *;
 
 #contact {
-  margin-top: 144px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 144px;
   margin-left: $header-space-pc;
 
   @include m.tb {
     margin-left: 0;
+  }
+
+  .contact {
+    @include m.sp-650 {
+      padding-bottom: $section-space-pc;
+    }
   }
 
   .container {
@@ -66,10 +74,23 @@
             }
           }
         }
+
+        .maru-border-m {
+          position: absolute;
+          left: -50px;
+          bottom: 50px;
+        }
+
+        .maru-stripe {
+          position: absolute;
+          left: 50px;
+          bottom: 30px;
+        }
       }
       
       .form {
         width: 50%;
+        background-color: $base-color;
         border: 1px solid $main-color;
         padding: 24px 32px;
 

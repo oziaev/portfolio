@@ -19,6 +19,7 @@ $fw-semi-bold: 400;
 $fw-base: 300;
 
 $ls-base: 0.03em;
+$lh-body: 1.6;
 
 //
 $section-space-pc: 96px;
@@ -42,7 +43,8 @@ body {
   font-size: 1.6rem;
   font-weight: $fw-base;
   letter-spacing: $ls-base;
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', 'IBM Plex Sans JP', sans-serif;
+  line-height: $lh-body;
   color: $font-color;
   background-color: $base-color;
 }
@@ -67,7 +69,7 @@ img {
 section {
   padding-bottom: 192px;
   // margin-bottom: 192px;
-
+  
   @include m.sp {
     padding-bottom: $section-space-pc;
     // margin-bottom: $section-space-pc;
@@ -84,7 +86,7 @@ section {
   max-width: 768px;
   padding-inline: 16px;
   margin-inline: auto;
-
+  
   @include m.tb-1100 {
     padding-inline: 24px;
   }
@@ -99,16 +101,16 @@ span {
   border-radius: 5px;
   text-shadow: 0 0 5px #fff, 0 0 10px $accent-color;
   box-shadow:
-    0 0 2px #fff,
-    inset 0 0 2px #fff,
-    0 0 0px #fff,
-    0 0 0px $accent-color,
-    0 0 0px $accent-color,
-    0 0 8px $accent-color,
-    0 0 8px $accent-color,
-    inset 0 0 8px $accent-color;
+  0 0 2px #fff,
+  inset 0 0 2px #fff,
+  0 0 0px #fff,
+  0 0 0px $accent-color,
+  0 0 0px $accent-color,
+  0 0 8px $accent-color,
+  0 0 8px $accent-color,
+  inset 0 0 8px $accent-color;
   padding: 8px 16px;
-
+  
   &:hover {
     animation: neon-flicker-v2 1.5s infinite alternate;
   }
@@ -254,6 +256,30 @@ span {
     text-shadow: none;
     box-shadow: none;
     border-color: rgba($accent-color, 0.3);
+    opacity: 0.7;
+  }
+}
+@keyframes neon-flicker-v3 {
+  // 【点灯】最新の密度の高い影を維持
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px $accent-color;
+    opacity: 1;
+  }
+
+  // 【瞬き】一瞬だけ光を飛ばす
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
     opacity: 0.7;
   }
 }

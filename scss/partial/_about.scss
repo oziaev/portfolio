@@ -58,6 +58,10 @@
       position: absolute;
       left: 100px;
       bottom: 30px;
+
+      @include m.sp {
+        display: none;
+      }
     }
   }
 
@@ -176,6 +180,8 @@
 
         @include m.sp {
           width: 65px;
+          top: -80px;
+          right: 20px;
         }
       }
 
@@ -304,7 +310,7 @@
 
           .title {
             border-bottom: 1px solid $main-color;
-            padding: 16px 8px;
+            padding: 16px 24px;
           }
 
           .list {

@@ -4,55 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>お問い合わせ | 【お名前】- Webデザイン・コーディング・WordPress制作</title>
+    <title>Contact | U Design - Webデザイン・コーディング・WordPress制作</title>
     <meta
       name="description"
-      content="【お名前】へのお問い合わせページです。Webデザインやコーディング、WordPress制作などのご依頼・ご相談はこちらからお気軽にどうぞ。" />
+      content="U Design へのお問い合わせページです。Webデザインやコーディング、WordPress制作などのご依頼・ご相談はこちらからお気軽にどうぞ。" />
 
     <meta name="robots" content="noindex, follow" />
 
+    <!-- Canonical -->
+    <!-- todo -->
     <link rel="canonical" href="https://your-domain.com/contact/" />
 
-    <meta property="og:site_name" content="【お名前】のポートフォリオ" />
-    <meta property="og:title" content="お問い合わせ | 【お名前】- Web制作ポートフォリオ" />
-    <meta
-      property="og:description"
-      content="Webデザイン・コーディング・WordPress・レスポンシブ対応などのご依頼・ご相談はお気軽にご連絡ください。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-domain.com/contact/" />
-    <meta
-      property="og:image"
-      content="https://your-domain.com/assets/ogp-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-
+    <!-- ファビコン -->
+    <!-- todo -->
     <link rel="icon" href="/favicon.ico" />
+    <!-- todo -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
+    <!-- テーマカラー -->
+    <meta name="theme-color" content="#333128" />
+
+    <!-- sns共有 -->
+    <meta property="og:site_name" content="U Design - Portfolio" />
+    <meta property="og:title" content="Contact | U Design - Webデザイン・コーディング・WordPress制作" />
+    <meta
+      property="og:description"
+      content="愛媛県拠点に活動。Webデザイン・コーディング・WordPress・レスポンシブ対応などのご依頼・ご相談はお気軽にご連絡ください。" />
+    <meta property="og:type" content="website" />
+    <!-- todo -->
+    <meta property="og:url" content="https://your-domain.com/contact/" />
+    <!-- todo -->
+    <meta property="og:image" content="https://your-domain.com/assets/ogp-image.jpg" />
+
+    <!-- Twitter Card -->
+    <!-- todo -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact | U Design - Webデザイン・コーディング・WordPress制作" />
+    <meta name="twitter:description" content="愛媛県拠点に活動。Webデザイン・コーディング・WordPress・レスポンシブ対応などのご依頼・ご相談はお気軽にご連絡ください。" />
+    <!-- todo -->
+    <meta name="twitter:image" content="https://img/og-image.jpg" />
+
+
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
-      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=IBM+Plex+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">    
+
     <!-- css -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ress@4.0.0/dist/ress.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- todo -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "お問い合わせ",
+        "name": "Contact",
         "url": "https://your-domain.com/contact/",
         "description": "Webデザインやコーディング、WordPress制作などのご依頼・ご相談はこちらからどうぞ。",
         "mainEntity": {
           "@type": "Person",
-          "name": "【お名前】",
+          "name": "U Design",
           "url": "https://your-domain.com/",
-          "jobTitle": "Web制作者",
-          "knowsAbout": ["Webデザイン", "HTML", "CSS", "WordPress", "レスポンシブデザイン"],
+          "jobTitle": "Web Designer & Developer",
+          "knowsAbout": ["Webデザイン", "HTML", "CSS", "JavaScript", "WordPress", "レスポンシブデザイン"],
           "address": {
             "@type": "PostalAddress",
             "addressRegion": "愛媛県",
@@ -84,9 +99,7 @@
             <li class="works">
               <a href="works.html"><span># </span>works</a>
             </li>
-            <li class="about">
-              <a href="about.html"><span># </span>about</a>
-            </li>
+            <li class="about"><a href="about.html"><span># </span>about_me</a></li>
             <li class="contact">
               <a href="contact.html"><span># </span>contact</a>
             </li>
@@ -136,20 +149,22 @@
                   </a>
                 </li>
               </ul>
+              <div class="maru-border-m"></div>
+              <div class="maru-stripe"></div>
             </div>
             <form action="#" class="form">
 
               <div class="form-item">
                 <label for="name">お名前 <span>※</span></label>
                 <div class="input-area">
-                  <input class="input" type="text" name="name" required />
+                  <input id="name" class="input" type="text" name="name" required />
                 </div>
               </div>
 
               <div class="form-item">
                 <label for="email">メールアドレス <span>※</span></label>
                 <div class="input-area">
-                  <input class="input" type="email" name="email" required />
+                  <input id="email" class="input" type="email" name="email" required />
                 </div>
               </div>
 
@@ -181,23 +196,23 @@
         <div class="text">
           <p class="name"><span>U</span> Design</p>
           <p class="job">
-            <span>Web designer</span> and <span>developer</span>.
+            <span>Web designer</span> and <span>Developer</span>.
           </p>
         </div>
         <ul class="sns">
           <li>
-            <a href="#">
-              <img src="img/contact-form.svg" alt="コンタクト_アイコン" />
+            <a href="contact.html">
+              <img src="img/contact-form.svg" alt="contact_form_アイコン" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/instagram.svg" alt="コンタクト_アイコン" />
+              <img src="img/instagram.svg" alt="Instagram_アイコン" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/x-twitter.svg" alt="コンタクト_アイコン" />
+              <img src="img/x-twitter.svg" alt="x_アイコン" />
             </a>
           </li>
         </ul>
