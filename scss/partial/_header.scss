@@ -87,8 +87,10 @@
           
           &:hover {
             text-shadow: 0 0 5px #fff, 0 0 10px $accent-color;
+            animation: neon-flicker-v3 1.5s infinite alternate;
 
             a {
+              width: 100%;
               color: $font-color;
             }
           }
@@ -117,10 +119,13 @@
         
         li {
           transition: $transition;
+          // padding: 4px;
           margin-right: 8px;
 
           &:hover {
-            opacity: .8;
+            img {
+              animation: kurukuru 1s ease-out;
+            }
           }
         }
       }
@@ -169,12 +174,12 @@
   }
 
   .mask {
-    width: 200px;
+    width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(51, 49, 40, 1);
+    background-color: rgba(51, 49, 40, .8);
     transform: translateX(100%);
     transition: $transition;
     opacity: 0;
@@ -186,7 +191,7 @@
     height: 100vh;
     left: auto;
     right: 0;
-    background-color: transparent;
+    background-color: rgba(51, 49, 40, 1);
     flex-direction: column;
     padding: 96px 24px;
     

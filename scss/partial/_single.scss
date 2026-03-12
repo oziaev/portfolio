@@ -1,0 +1,262 @@
+@use "_mixin" as m;
+@use "_common" as *;
+
+#works-single {
+  margin-left: $header-space-pc;
+  
+  @include m.tb {
+    margin-left: 0;
+  }  
+  
+  .works {
+    position: relative;
+    overflow-x: hidden;
+    padding-top: $section-space-pc;
+
+    .maru-border-s {
+      position: absolute;
+      top: -20px;
+      right: 50px;
+      
+      @include m.tb {
+        top: 50px;
+        right: -20px;
+      }
+      
+      @include m.sp-650 {
+        top: 450px;
+      }
+      
+      @include m.sp {
+        top: 400px;
+      }
+    }
+    
+    .item {
+      @include m.sp-650 {
+        padding: 0 24px;
+      }
+      
+      @include m.sp {
+        padding: 0;
+      }
+      
+      .img-box {
+        max-width: 768px;
+        margin-inline: auto;
+        margin-bottom: $section-space-sp;
+      }
+      
+      .title {
+        max-width: 768px;
+        margin-inline: auto;
+        margin-bottom: 144px;
+        
+        @include m.sp-650 {
+          margin-bottom: $section-space-pc;
+        }
+        
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: $section-space-sp;
+          
+          @include m.sp-650 {
+            flex-direction: column;
+          }
+          
+          h2 {
+            width: 70%;
+            // font-weight: $fw-base;
+            
+            @include m.sp-650 {
+              width: 100%;
+              margin-bottom: 32px;
+            }
+            
+            @include m.sp {
+              font-size: $fs-lg;
+            }
+          }
+          
+          .link {
+            width: 30%;
+            text-align: right;
+            
+            @include m.sp-650 {
+              width: 100%;
+              text-align: left;
+            }
+          }
+        }
+        
+        .text-area {
+          .text {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      
+      .info {
+        margin-bottom: 194px;
+        
+        @include m.sp-650 {
+          flex-direction: column;
+          margin-bottom: 144px;
+          // margin-bottom: $section-space-pc;
+        }
+      }
+      
+      .concept {
+        @include m.sp-650 {
+          flex-direction: column-reverse;
+        }
+        
+      }
+      .info,
+      .concept {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .img {
+          width: 55%;
+          
+          @include m.sp-650 {
+            width: 100%;
+            margin-bottom: $section-space-sp;
+          }
+        }
+        
+        dl {
+          width: 40%;
+          font-size: 1.4rem;
+          
+          @include m.sp-650 {
+            width: 100%;
+          }
+          
+          dt {
+            font-weight: $fw-bold;
+            color: $accent-color;
+            margin-bottom: 8px;
+          }  
+          
+          dd {
+            margin-bottom: 32px;
+            
+            &:last-child {
+              margin-bottom: 0;
+            }  
+          }  
+        }  
+      }
+    }
+
+    .maru-stripe {
+      position: absolute;
+      right: 150px;
+      bottom: 100px;
+
+      @include m.sp {
+        right: -40px;
+      }
+    }
+    
+    .maru-border-m {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+
+      @include m.sp {
+        right: -30px;
+      }
+    }
+  }
+
+  .contact {
+    position: relative;
+    overflow-x: hidden;
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+
+      @include m.sp-650 {
+        flex-direction: column;
+      }
+
+      .text {
+        width: 60%;
+        color: $main-color;
+        font-size: 1.4rem;
+        margin-right: 16px;
+
+        @include m.sp-650 {
+          width: 100%;
+          margin-bottom: $section-space-sp;
+        }
+      }
+
+      .box {
+        width: 40%;
+
+        @include m.sp-650 {
+          width: 100%;
+        }
+
+        .box-inner {
+          width: 260px;
+          background-color: $base-color;
+          border: 1px solid $main-color;
+          margin-inline: auto;
+
+          .title {
+            border-bottom: 1px solid $main-color;
+            padding: 16px 24px;
+          }
+
+          .list {
+            padding: 16px 8px;
+            
+            .item {
+              padding: 8px;
+
+              &:hover {
+                text-shadow:
+                  0 0 3px #fff,
+                  0 0 8px $accent-color;
+                animation: neon-flicker-v2 1.5s infinite alternate;
+
+                img {
+                  animation: kurukuru 1s ease-out;
+                }
+              }
+
+              a {
+                display: flex;
+                align-items: center;
+              }
+
+              img {
+                width: 30px;
+                margin-right: 8px;
+              }
+
+              p {
+                transition: $transition;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .maru-border-m {
+      position: absolute;
+      left: -30px;
+      bottom: 50px; 
+    }
+  }
+}
