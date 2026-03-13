@@ -35,11 +35,23 @@ $(function () {
   });
 
   // ----------------------------------------------
-$(window).on('load', function() {
-  $('.introduction, .supplement, .fv-btn').each(function() {
-    $(this).addClass('is-visible');
+  // $(window).on('load', function() {
+  //   $('.introduction, .supplement, .fv-btn').each(function() {
+  //     $(this).addClass('is-visible');
+  //   });
+  // });
+  $(window).on('load', function() {
+    if(!localStorage.getItem('visited')) {
+      $('.introduction, .supplement, .fv-btn').each(function() {
+        $(this).addClass('is-visible');
+      });
+      localStorage.setItem('visited', 'true');
+    } else {
+      $('.introduction, .supplement, .fv-btn').each(function() {
+      $(this).addClass('is-visible').css('transition', 'none');
+      });
+    }
   });
-});
   // ----------------------------------------------
 
   // ----------------------------------------------

@@ -134,87 +134,87 @@
     }
   }
 
-  .contact {
-    position: relative;
-    overflow-x: hidden;
+  // .contact {
+  //   position: relative;
+  //   overflow-x: hidden;
 
-    .flex {
-      display: flex;
-      justify-content: space-between;
+  //   .flex {
+  //     display: flex;
+  //     justify-content: space-between;
 
-      @include m.sp-650 {
-        flex-direction: column;
-      }
+  //     @include m.sp-650 {
+  //       flex-direction: column;
+  //     }
 
-      .text {
-        width: 60%;
-        color: $main-color;
-        font-size: 1.4rem;
-        margin-right: 16px;
+  //     .text {
+  //       width: 60%;
+  //       color: $main-color;
+  //       font-size: 1.4rem;
+  //       margin-right: 16px;
 
-        @include m.sp-650 {
-          width: 100%;
-          margin-bottom: $section-space-sp;
-        }
-      }
+  //       @include m.sp-650 {
+  //         width: 100%;
+  //         margin-bottom: $section-space-sp;
+  //       }
+  //     }
 
-      .box {
-        width: 40%;
+  //     .box {
+  //       width: 40%;
 
-        @include m.sp-650 {
-          width: 100%;
-        }
+  //       @include m.sp-650 {
+  //         width: 100%;
+  //       }
 
-        .box-inner {
-          width: 260px;
-          background-color: $base-color;
-          border: 1px solid $main-color;
-          margin-inline: auto;
+  //       .box-inner {
+  //         width: 260px;
+  //         background-color: $base-color;
+  //         border: 1px solid $main-color;
+  //         margin-inline: auto;
 
-          .title {
-            border-bottom: 1px solid $main-color;
-            padding: 16px 24px;
-          }
+  //         .title {
+  //           border-bottom: 1px solid $main-color;
+  //           padding: 16px 24px;
+  //         }
 
-          .list {
-            padding: 16px 8px;
-            .item {
-              padding: 8px;
+  //         .list {
+  //           padding: 16px 8px;
+  //           .item {
+  //             padding: 8px;
 
-              &:hover {
-                text-shadow:
-                  0 0 3px #fff,
-                  0 0 8px $accent-color;
-                animation: neon-flicker-v2 1.5s infinite alternate;
+  //             &:hover {
+  //               text-shadow:
+  //                 0 0 3px #fff,
+  //                 0 0 8px $accent-color;
+  //               animation: neon-flicker-v2 1.5s infinite alternate;
 
-                img {
-                  animation: kurukuru 1s ease-out;
-                }
-              }
+  //               img {
+  //                 animation: kurukuru 1s ease-out;
+  //               }
+  //             }
 
-              a {
-                display: flex;
-                align-items: center;
-              }
+  //             a {
+  //               display: flex;
+  //               align-items: center;
+  //             }
 
-              img {
-                width: 30px;
-                margin-right: 8px;
-              }
+  //             img {
+  //               width: 30px;
+  //               margin-right: 8px;
+  //             }
 
-              p {
-                transition: $transition;
-              }
-            }
-          }
-        }
-      }
-    }
+  //             p {
+  //               transition: $transition;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
 
-    .maru-border-m {
-      position: absolute;
-      left: -30px;
-      bottom: 50px; 
-    }
-  }
+  //   .maru-border-m {
+  //     position: absolute;
+  //     left: -30px;
+  //     bottom: 50px; 
+  //   }
+  // }
 }
