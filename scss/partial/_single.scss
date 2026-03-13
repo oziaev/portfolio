@@ -68,7 +68,7 @@
           
           h2 {
             width: 70%;
-            // font-weight: $fw-base;
+            font-weight: $fw-semi-bold;
             
             @include m.sp-650 {
               width: 100%;
@@ -154,6 +154,15 @@
       }
     }
 
+    .back {
+      text-align: center;
+      margin-top: $section-space-pc;
+      // margin-inline: auto;
+      .btn {
+        text-align: left;
+      }
+    }
+
     .maru-stripe {
       position: absolute;
       right: 150px;
@@ -172,91 +181,6 @@
       @include m.sp {
         right: -30px;
       }
-    }
-  }
-
-  .contact {
-    position: relative;
-    overflow-x: hidden;
-
-    .flex {
-      display: flex;
-      justify-content: space-between;
-
-      @include m.sp-650 {
-        flex-direction: column;
-      }
-
-      .text {
-        width: 60%;
-        color: $main-color;
-        font-size: 1.4rem;
-        margin-right: 16px;
-
-        @include m.sp-650 {
-          width: 100%;
-          margin-bottom: $section-space-sp;
-        }
-      }
-
-      .box {
-        width: 40%;
-
-        @include m.sp-650 {
-          width: 100%;
-        }
-
-        .box-inner {
-          width: 260px;
-          background-color: $base-color;
-          border: 1px solid $main-color;
-          margin-inline: auto;
-
-          .title {
-            border-bottom: 1px solid $main-color;
-            padding: 16px 24px;
-          }
-
-          .list {
-            padding: 16px 8px;
-            
-            .item {
-              padding: 8px;
-
-              &:hover {
-                text-shadow:
-                  0 0 3px #fff,
-                  0 0 8px $accent-color;
-                animation: neon-flicker-v2 1.5s infinite alternate;
-
-                img {
-                  animation: kurukuru 1s ease-out;
-                }
-              }
-
-              a {
-                display: flex;
-                align-items: center;
-              }
-
-              img {
-                width: 30px;
-                margin-right: 8px;
-              }
-
-              p {
-                transition: $transition;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .maru-border-m {
-      position: absolute;
-      left: -30px;
-      bottom: 50px; 
     }
   }
 }

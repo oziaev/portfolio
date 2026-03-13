@@ -112,6 +112,32 @@ span {
   }
 }
 
+.breadcrumb {
+  position: absolute;
+  top: 16px;
+  z-index: 800;
+}
+@media (max-width: 900px) {
+  .breadcrumb {
+    top: 96px;
+  }
+}
+.breadcrumb ol {
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: 24px;
+}
+.breadcrumb ol li {
+  margin-right: 16px;
+}
+.breadcrumb ol li:hover a {
+  color: #fff;
+}
+.breadcrumb ol li a {
+  transition: 0.3s ease;
+  color: #abb2bf;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -966,78 +992,6 @@ span {
   border: 1px solid #dbdb79;
   text-shadow: 0 0 3px #fff, 0 0 8px #dbdb79;
 }
-#works-list .contact {
-  position: relative;
-  overflow-x: hidden;
-}
-#works-list .contact .flex {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 650px) {
-  #works-list .contact .flex {
-    flex-direction: column;
-  }
-}
-#works-list .contact .flex .text {
-  width: 60%;
-  color: #abb2bf;
-  font-size: 1.4rem;
-  margin-right: 16px;
-}
-@media (max-width: 650px) {
-  #works-list .contact .flex .text {
-    width: 100%;
-    margin-bottom: 48px;
-  }
-}
-#works-list .contact .flex .box {
-  width: 40%;
-}
-@media (max-width: 650px) {
-  #works-list .contact .flex .box {
-    width: 100%;
-  }
-}
-#works-list .contact .flex .box .box-inner {
-  width: 260px;
-  background-color: #333128;
-  border: 1px solid #abb2bf;
-  margin-inline: auto;
-}
-#works-list .contact .flex .box .box-inner .title {
-  border-bottom: 1px solid #abb2bf;
-  padding: 16px 24px;
-}
-#works-list .contact .flex .box .box-inner .list {
-  padding: 16px 8px;
-}
-#works-list .contact .flex .box .box-inner .list .item {
-  padding: 8px;
-}
-#works-list .contact .flex .box .box-inner .list .item:hover {
-  text-shadow: 0 0 3px #fff, 0 0 8px #dbdb79;
-  animation: neon-flicker-v2 1.5s infinite alternate;
-}
-#works-list .contact .flex .box .box-inner .list .item:hover img {
-  animation: kurukuru 1s ease-out;
-}
-#works-list .contact .flex .box .box-inner .list .item a {
-  display: flex;
-  align-items: center;
-}
-#works-list .contact .flex .box .box-inner .list .item img {
-  width: 30px;
-  margin-right: 8px;
-}
-#works-list .contact .flex .box .box-inner .list .item p {
-  transition: 0.3s ease;
-}
-#works-list .contact .maru-border-m {
-  position: absolute;
-  left: -30px;
-  bottom: 50px;
-}
 
 #works-single {
   margin-left: 180px;
@@ -1111,6 +1065,7 @@ span {
 }
 #works-single .works .item .title .top h2 {
   width: 70%;
+  font-weight: 400;
 }
 @media (max-width: 650px) {
   #works-single .works .item .title .top h2 {
@@ -1192,6 +1147,13 @@ span {
 #works-single .works .item .concept dl dd:last-child {
   margin-bottom: 0;
 }
+#works-single .works .back {
+  text-align: center;
+  margin-top: 96px;
+}
+#works-single .works .back .btn {
+  text-align: left;
+}
 #works-single .works .maru-stripe {
   position: absolute;
   right: 150px;
@@ -1211,78 +1173,6 @@ span {
   #works-single .works .maru-border-m {
     right: -30px;
   }
-}
-#works-single .contact {
-  position: relative;
-  overflow-x: hidden;
-}
-#works-single .contact .flex {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 650px) {
-  #works-single .contact .flex {
-    flex-direction: column;
-  }
-}
-#works-single .contact .flex .text {
-  width: 60%;
-  color: #abb2bf;
-  font-size: 1.4rem;
-  margin-right: 16px;
-}
-@media (max-width: 650px) {
-  #works-single .contact .flex .text {
-    width: 100%;
-    margin-bottom: 48px;
-  }
-}
-#works-single .contact .flex .box {
-  width: 40%;
-}
-@media (max-width: 650px) {
-  #works-single .contact .flex .box {
-    width: 100%;
-  }
-}
-#works-single .contact .flex .box .box-inner {
-  width: 260px;
-  background-color: #333128;
-  border: 1px solid #abb2bf;
-  margin-inline: auto;
-}
-#works-single .contact .flex .box .box-inner .title {
-  border-bottom: 1px solid #abb2bf;
-  padding: 16px 24px;
-}
-#works-single .contact .flex .box .box-inner .list {
-  padding: 16px 8px;
-}
-#works-single .contact .flex .box .box-inner .list .item {
-  padding: 8px;
-}
-#works-single .contact .flex .box .box-inner .list .item:hover {
-  text-shadow: 0 0 3px #fff, 0 0 8px #dbdb79;
-  animation: neon-flicker-v2 1.5s infinite alternate;
-}
-#works-single .contact .flex .box .box-inner .list .item:hover img {
-  animation: kurukuru 1s ease-out;
-}
-#works-single .contact .flex .box .box-inner .list .item a {
-  display: flex;
-  align-items: center;
-}
-#works-single .contact .flex .box .box-inner .list .item img {
-  width: 30px;
-  margin-right: 8px;
-}
-#works-single .contact .flex .box .box-inner .list .item p {
-  transition: 0.3s ease;
-}
-#works-single .contact .maru-border-m {
-  position: absolute;
-  left: -30px;
-  bottom: 50px;
 }
 
 #about {

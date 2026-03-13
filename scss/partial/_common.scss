@@ -96,6 +96,7 @@ span {
   color: $accent-color;
 }
 
+// 共通ボタン
 .btn {
   border: 1px solid $accent-color;
   border-radius: 5px;
@@ -116,6 +117,7 @@ span {
   }
 }
 
+// 共通セクションタイトル
 .section-title {
   font-size: $fs-xl;
   font-weight: $fw-bold;
@@ -143,6 +145,7 @@ span {
   }
 }
 
+// 下層ページ共通タイトル
 .page-title {
   font-size: $fs-xl;
   font-weight: $fw-bold;
@@ -151,6 +154,38 @@ span {
   @include m.sp {
     font-size: $fs-lg;
     margin-bottom: $section-space-sp;
+  }
+}
+
+// パンクズ
+.breadcrumb {
+  position: absolute;
+  top: 16px;
+  z-index: 800;
+
+  @include m.tb {
+    top: 96px;
+  }
+
+  ol {
+    display: flex;
+    font-size: $fs-sm;
+    margin-left: 24px;
+
+    li {
+      margin-right: 16px;
+      
+      &:hover {
+        a {
+          color: $font-color;
+        }
+      }
+      
+      a {
+        transition: $transition;
+        color: $main-color;
+      }
+    }
   }
 }
 
